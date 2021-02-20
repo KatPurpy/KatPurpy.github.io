@@ -1,0 +1,203 @@
+* {
+    color: rgb(192, 192, 192);
+    text-align: center;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 3px rgb(255, 0, 0),
+    -1px -1px 3px blue;
+
+}
+
+#background{
+    width:100%;
+    height:100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    z-index: -2;
+    background: url("/background.jpeg") repeat;
+    background-size: 50%;
+
+    animation-name: trippy;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes trippy{
+    from{
+        filter: blur(1vw) saturate(3) hue-rotate(0) blur(0.75vw);
+    }
+
+    to{
+        filter: blur(1vw) saturate(3) hue-rotate(360deg) blur(0.75vw);
+    }
+}
+
+.scrolling-bg{
+    animation-name: anim;
+    animation-duration: 10000s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#entire-thing-container{
+    max-width: 2000px;
+    min-width: 900px;
+    height: 100%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+html,
+body {
+    
+    height: 100%;
+    margin: 0;
+    font-family: "Singlet-Regular";
+    scrollbar-color: rgb(46, 0, 38) black;
+}
+
+@font-face {
+    font-family: "Singlet-Regular";
+    src: url('/fonts/Sniglet-Regular.ttf');
+}
+
+.generic-flex-container{
+    display: flex; flex-wrap: wrap;  align-items: center; justify-content: center;
+}
+
+.centered-thing{
+    margin-left:auto;margin-right:auto;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0, 0;
+    }
+
+    100% {
+        background-position: 66000% 77000%;
+    }
+}
+
+#bg-tint {
+    background: #000000AA;
+
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+
+    overflow-y: auto;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+a{
+    color: rgb(161, 247, 255);
+}
+
+a:hover {
+    color: rgb(247, 0, 255);
+    font-weight: bold;
+}
+
+#text-wrapper {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(88, 0, 74);
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 1fr 20px;
+}
+
+.default-glow{
+    /* box-shadow: 0 0 20px 20px rgba(219, 255, 255, 0.394), */
+    /* 0 0 20px 20px rgba(0, 247, 255, 0.389); */
+}
+
+.blog-entry {
+    margin: 0;
+    max-width: 740px;
+    min-width: 100px;
+    padding: 10px;
+}
+
+.textbox-normal{
+    border-color: rgb(110, 0, 110);
+    border-width: 25px;
+    border-style: outset;
+    background: rgb(85, 6, 88);
+}
+
+.game-entry{
+    min-width: 265px;
+    min-height: 265px;
+    margin: 10px;
+    position: relative;
+}
+
+.game-entry{
+    transition: all 0.5s;
+    border-width: 0px;
+}
+.game-entry *{
+    transition: all 0.5s;
+}
+
+.game-entry:hover{
+    border-width: 25px;
+    transition: all 0.5s;
+    border-color: rgb(45, 0, 87);
+}
+
+.game-entry:hover #dim{
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.game-entry #show-on-hover *{
+    text-shadow: none;
+    transition: all 0.5s;
+    color:transparent;
+}
+
+.game-entry:hover #show-on-hover *{
+    visibility: visible;
+    
+    color: inherit;
+    text-shadow: inherit;
+
+    transition: all 0.5s;
+}
+
+.game-entry:hover #bg{
+    filter:blur(6px);
+    transition: all 0.5s;
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#pancake-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+
+
+.footer-part{
+    position: relative; min-height: 60px; display: block;min-width: 33.3%;
+}
+.footer-part-content{
+    position:absolute;bottom: 0;
+}
