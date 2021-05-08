@@ -221,8 +221,7 @@ a:hover {
     border-color: rgb(45, 0, 87);
     text-shadow: none;
     color:rgb(192, 192, 192);
-    box-shadow: none;
-    /*box-shadow: 0px 0px 100px yellow;*/
+    box-shadow: 0px 0px 100px yellow;
     font-weight: none;
 }
 
