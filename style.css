@@ -1,6 +1,6 @@
 * {
     color: rgb(192, 192, 192);
-    text-align: center;
+
     word-wrap: break-word;
     text-shadow: 1px 1px 3px rgb(255, 0, 0),
     -1px -1px 3px blue;
@@ -53,7 +53,7 @@
 
 html,
 body {
-    
+    text-align: center;
     height: 100%;
     margin: 0;
     font-family: "Singlet-Regular";
@@ -202,7 +202,17 @@ footer {
 .footer-part-content{
     position:absolute;bottom: 0;
 }
+/*eeeeeeeeee*/
+.highlight{
+    text-align: left;display: inline-block;
+}
+.highlight pre{
+    padding: 15px;
+}
 
+li::marker {
+    content:"\2B50";
+}
 
 /* @media screen and (max-width : 1204px)
 {
