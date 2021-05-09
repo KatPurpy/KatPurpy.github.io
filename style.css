@@ -82,7 +82,7 @@ code{
 
 #background{
     position: fixed;
-    z-index: -2;
+    z-index: -1;
     width:100%;
     height:100%;
     padding-left: 0;
@@ -206,6 +206,7 @@ a:hover {
 }
 
 .game-entry{
+    
     min-width: 265px;
     min-height: 265px;
     margin: 10px;
@@ -213,9 +214,10 @@ a:hover {
 }
 
 .game-entry{
+    border-width: 25px;
     transition: all 0.5s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-width: 0px;
+
     text-shadow: none;
     color:transparent;
 }
@@ -226,7 +228,7 @@ a:hover {
 
 .game-entry:hover{
     z-index: 3;
-    border-width: 25px;
+    /*border-width: 25px;*/
     transition: all 0.5s;
     border-color: rgb(45, 0, 87);
     text-shadow: none;
