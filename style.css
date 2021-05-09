@@ -77,7 +77,7 @@ html,body {
 
 
 code{
-    text-shadow: 0px 0px 6px red;
+    text-shadow: none;/*0px 0px 6px red*/
 }
 
 #background{
