@@ -60,10 +60,13 @@ body,head {
     color: rgb(192, 192, 192);
 
     word-wrap: break-word;
-    text-shadow: 1px 1px 10px rgb(255, 0, 0),
+    text-shadow: 1px 1px 10px red,
     -1px -1px 10px blue;
 }
-
+body{
+    background: url("/background_fallback.jpeg") repeat;
+    background-size: 50%;
+}
 html,body {
     text-align: center;
     height: 100%;
@@ -78,20 +81,24 @@ code{
 }
 
 #background{
-    width:100%;
-    height:100%;
-    min-width: 100%;
-    min-height: 100%;
     position: fixed;
     z-index: -2;
-    background: url("/background.jpeg") repeat;
-    background-size: 50%;
+    width:100%;
+    height:100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 
+
+
+    /*background-color: black;
     animation-name: trippy;
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate;*/
 }
 
 
@@ -128,7 +135,8 @@ code{
 }
 
 .generic-flex-container{
-    display: flex; flex-wrap: wrap;  align-items: center; justify-content: center;
+    display: flex; flex-wrap: wrap;  justify-content: center;
+    align-items: flex-start;
 }
 
 .centered-thing{
@@ -145,7 +153,7 @@ code{
     }
 }
 
-#bg-tint {
+/*#bg-tint {
     background: #000000AA;
 
     position: fixed;
@@ -157,7 +165,7 @@ code{
     top: 0;
     left: 0;
     bottom: 0;
-}
+}*/
 
 a{
     color: rgb(161, 247, 255);
@@ -206,12 +214,14 @@ a:hover {
 
 .game-entry{
     transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     border-width: 0px;
     text-shadow: none;
     color:transparent;
 }
 .game-entry *{
     transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .game-entry:hover{
@@ -223,10 +233,12 @@ a:hover {
     color:rgb(192, 192, 192);
     box-shadow: 0px 0px 100px mediumpurple;
     font-weight: none;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .game-entry:hover #dim{
     transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: rgba(0, 0, 0, 0.575);
 }
 
@@ -234,6 +246,7 @@ a:hover {
     text-shadow: none;
     transition: all 0.5s;
     color:transparent;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .game-entry:hover #show-on-hover *{
@@ -243,6 +256,7 @@ a:hover {
     text-shadow: inherit;
 
     transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .game-entry:hover #bg{
@@ -284,20 +298,8 @@ li::marker {
 }
 
 .spicyGlowingTitle{
-    animation-name: titlespice;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-}
-
-@keyframes titlespice{
-    from{
-        text-shadow: 0px 0px 0.5em magenta,0px 0px 1.5em magenta;
-    }
-    to{
-        text-shadow: 0px 0px 0.5em cyan,0px 0px 1.5em cyan;
-    }
+    text-shadow: 0px 0px 1.5em magenta,
+    0px 0px 0.5em cyan;
 }
 
 /* @media screen and (max-width : 1204px)
