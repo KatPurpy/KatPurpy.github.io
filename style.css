@@ -177,13 +177,26 @@ a:hover {
 }
 
 #text-wrapper {
-    width: 75%;
+    width:55%;
+    line-height: 1.75;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(88, 0, 74);
     min-height: 200px;
     display: grid;
     grid-template-rows: 1fr 20px;
+}
+
+@media screen and (min-width : 1400px){
+    #text-wrapper{
+        width:45%; 
+    }
+}
+
+@media screen and (max-width : 1360px){
+    #text-wrapper{
+        width: 65%; /*75%*/
+    }
 }
 
 .default-glow{
@@ -289,7 +302,7 @@ footer {
 }
 /*eeeeeeeeee*/
 .highlight{
-    text-align: left;display: inline-block;
+    line-height: normal;  text-align: left;display: inline-block;
 }
 .highlight pre{
     padding: 15px;
