@@ -279,7 +279,25 @@ a:hover {
     transition: all 0.5s;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 2px dashed rgba(255,255,255,0.4);
+}
+header > a{
+    margin-left: 12px;
+    margin-right: 12px;
+    text-decoration: none;
+    font-size: 125%;
+}
+
 footer {
+    padding-top: 12px;
+    border-top: 2px dashed rgba(255,255,255,0.4);
     width: 100%;
     bottom: 0;
     left: 0;
@@ -298,7 +316,10 @@ footer {
     position: relative; min-height: 60px; display: block;min-width: 33.3%;
 }
 .footer-part-content{
-    position:absolute;bottom: 0;
+    text-align: center;
+    display: inline;
+    vertical-align: 50%;
+    /*position:absolute;bottom: 0;*/
 }
 /*eeeeeeeeee*/
 .highlight{
