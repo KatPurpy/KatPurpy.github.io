@@ -56,6 +56,14 @@ Never gonna make you cry
 Never gonna say goodbye
 */
 
+/*
+                        CREDITS
+
+   to Atlas, Leros, peaky, TechPizza, SaladinAkara, and everyone else
+
+                      Thank you :D
+*/
+
 body,head {
     color: rgb(192, 192, 192);
 
@@ -296,6 +304,7 @@ header > a{
 }
 
 footer {
+    margin-top: 32px;
     padding-top: 12px;
     border-top: 2px dashed rgba(255,255,255,0.4);
     width: 100%;
