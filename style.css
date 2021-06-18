@@ -72,8 +72,8 @@ body,head {
     -1px -1px 10px blue;
 }
 body{
-    background: url("/background_fallback.jpeg") repeat;
-    background-size: 50%;
+    background: url("/background_fallback.jpeg");
+    background-size: 100%;
 }
 html,body {
     text-align: center;
