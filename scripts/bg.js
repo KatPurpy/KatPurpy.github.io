@@ -1,7 +1,9 @@
 var vs = `
 attribute vec4 position;
+attribute vec2 uv;
 
 varying vec2 vecPos;
+varying vec2 UV;
 
 void main() {
     vecPos = position.xy;
@@ -26,29 +28,27 @@ vec3 hueShift(vec3 color, float hue)
 }
 
 void main() {
-    vec2 img = vec2(960.0,1440.0);
-
-    float factor = screen_res.x / canvas_res.x;
-    vec2 pixel = vec2(
-        gl_FragCoord.x * factor,
-        (canvas_res.y - gl_FragCoord.y) *  factor
-    );
-    vec2 uv =  pixel.xy / screen_res * 2.;
-    uv.y /= 2.65; //correcting the aspect ratio
+    vec2 uv = (vecPos+vec2(1,1))/2.;
+    uv.y = 1.-uv.y;
+    //vec2 uv = vec2(gl_FragCoord.x, canvas_res.y - gl_FragCoord.y) / screen_res;
 
     float wonkiness = max(min(time/5.,1.),0.);
-    uv.x += mix(0.,sin(time *0.5 + gl_FragCoord.y*0.005)* 0.01,wonkiness);
-
+    uv.x += mix(0.
+        ,sin(time *0.5 + uv.y*1.5)* 0.01,wonkiness);
+    uv.y += mix(0.
+        ,cos(time *0.5 + uv.x*5.)* 0.01,wonkiness);
 
     float dim = (255.0-170.0)/255.0;
     vec3 color = texture2D(tex,uv.xy).xyz;
 
-    gl_FragColor = vec4(
+    vec4 color2 = vec4(texture2D(tex,uv.xy).xyz/4.,1);
+
+    gl_FragColor = mix(vec4(
         mix(
             color,
-            hueShift(color,(gl_FragCoord.y/50.+ 1.*time))
-            ,wonkiness
-            ),1) * vec4(dim,dim,dim,1);
+            hueShift(color,(vecPos.y+ 1.*time))
+            ,wonkiness-0.5
+            ),1) * vec4(dim,dim,dim,1),  color2,0.5);
 
 }
     `;
@@ -67,7 +67,7 @@ const arrays = {
 };
 const bufferInfo = twgl.createBufferInfoFromArrays(gl, arrays);
 const background = twgl.createTexture(gl, {
-    src: "/background.jpeg"
+    src: "/backgrounds/art" + (new Date().getSeconds() % 7 + 1) + '_crushed.png'
 });
 
 function render(time) {
