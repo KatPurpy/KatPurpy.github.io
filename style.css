@@ -73,7 +73,8 @@ body,head {
 }
 body{
     background: url("/background_fallback.jpeg");
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 html,body {
     text-align: center;
