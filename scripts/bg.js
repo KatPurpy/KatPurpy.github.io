@@ -34,9 +34,9 @@ void main() {
 
     float wonkiness = max(min(time/5.,1.),0.);
     uv.x += mix(0.
-        ,sin(time *0.5 + uv.y*1.5)* 0.01,wonkiness);
+        ,sin(time *0.5 + uv.y*1.5)* 0.01,wonkiness)/2.;
     uv.y += mix(0.
-        ,cos(time *0.5 + uv.x*5.)* 0.01,wonkiness);
+        ,cos(time *0.5 + uv.x*5.)* 0.01,wonkiness)/2.;
 
     float dim = (255.0-170.0)/255.0;
     vec3 color = texture2D(tex,uv.xy).xyz;
