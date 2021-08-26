@@ -236,6 +236,7 @@ a:hover {
 }
 
 .game-entry{
+    display: block;
     border-width: 25px;
     transition: all 0.5s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -255,7 +256,7 @@ a:hover {
     border-color: rgb(45, 0, 87);
     text-shadow: none;
     color:rgb(192, 192, 192);
-    box-shadow: 0px 0px 100px mediumpurple;
+    /*box-shadow: 0px 0px 100px mediumpurple;*/
     font-weight: none;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
