@@ -86,6 +86,6 @@ function render(time) {
     twgl.setUniforms(programInfo, uniforms);
     twgl.drawBufferInfo(gl, bufferInfo);
 
-    requestAnimationFrame(render);
+    requestAnimationFrame(render,gl.canvas);
 }
-requestAnimationFrame(render);
+requestAnimationFrame(render,gl.canvas);

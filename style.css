@@ -243,6 +243,7 @@ a:hover {
 
     text-shadow: none;
     color:transparent;
+    font-weight: none;
 }
 .game-entry *{
     transition: all 0.5s;
