@@ -66,8 +66,25 @@ const arrays = {
     ],
 };
 const bufferInfo = twgl.createBufferInfoFromArrays(gl, arrays);
+const bgs = [
+    "art1.jpg",
+    "art2.jpg",
+    "art3.jpg",
+    "art4.jpg",
+    "art5.jpg",
+    "art6.jpg",
+    "art7.jpg",
+    "smbr1.jpg",
+    "smbr2.jpg",
+    "smbr3.jpg",
+    "smbr4.jpg",
+];
+const randomBG = bgs[Math.floor(Math.random()*bgs.length)]
+const cursedBG = "smbr3.jpg"
+const putCurse = document.URL.includes("monkeydiet")
+let bg = putCurse ? cursedBG : randomBG
 const background = twgl.createTexture(gl, {
-    src: "/backgrounds/art" + (new Date().getSeconds() % 7 + 1) + '_crushed.png'
+    src: "/backgrounds/" + bg
 });
 
 function render(time) {

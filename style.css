@@ -228,14 +228,11 @@ a:hover {
 }
 
 .game-entry{
-    
     min-width: 265px;
     min-height: 265px;
     margin: 10px;
     position: relative;
-}
-
-.game-entry{
+    font-weight: bold;
     display: block;
     border-width: 25px;
     transition: all 0.5s;
@@ -243,7 +240,7 @@ a:hover {
 
     text-shadow: none;
     color:transparent;
-    font-weight: none;
+    /*font-weight: none;*/
 }
 .game-entry *{
     transition: all 0.5s;
