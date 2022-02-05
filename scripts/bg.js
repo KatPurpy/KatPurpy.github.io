@@ -80,11 +80,11 @@ const bgs = [
     "smbr4.jpg",
 ];
 const randomBG = bgs[Math.floor(Math.random()*bgs.length)]
-const cursedBG = "smbr3.jpg"
-const putCurse = document.URL.includes("monkeydiet")
-let bg = putCurse ? cursedBG : randomBG
+//const cursedBG = "smbr3.jpg"
+//const putCurse = document.URL.includes("monkeydiet")
+//let bg = putCurse ? cursedBG : randomBG
 const background = twgl.createTexture(gl, {
-    src: "/backgrounds/" + bg
+    src: "/backgrounds/" + randomBG
 });
 
 function render(time) {
