@@ -53,5 +53,55 @@ document.addEventListener('keydown', function(e) {
 
 function activateCheats() {
   document.getElementById("background").classList.add("scrolling-bg");
-  alert("Party mode activated!");
+  bg_party_mode = 6;
+  //alert("Party mode activated!");
+  var rythm = new Rythm()
+  rythm.setMusic('/ratmass.mp3')
+
+  rythm.addRythm('neon2', 'neon', 5, 10, {
+    from: [0,0,255],
+    to:[255,0,255]
+  })
+
+  rythm.addRythm('borderColor2', 'borderColor', 0, 10, {
+    from: [0,0,255],
+    to:[255,0,255]
+  })
+
+
+  rythm.addRythm('borderEffect1', 'borderWidth', 0, 2, {
+    min: 10,
+    max: 20
+  })
+
+  rythm.addRythm('swing4', 'jump', 150, 20, {
+    min: -20,
+    max: 20
+  })
+
+
+
+
+            rythm.addRythm('spicyGlowingTitle', 'kern', 0, 10 , {
+              min: -5,
+              max: 5
+            })
+          
+            rythm.addRythm('kern1', 'kern', 0, 10 , {
+              min: -5,
+              max: 15
+            })
+
+            rythm.addRythm('kern2', 'kern', 0, 30 , {
+              min: -2,
+              max: 2,
+            })
+
+            rythm.addRythm('kern2', 'neon', 0, 10, {
+              from: [0,0,255],
+              to:[255,0,255]
+            })
+          
+
+  rythm.start()
 }

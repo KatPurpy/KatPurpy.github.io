@@ -1,0 +1,207 @@
+/*
+We're no strangers to love
+You know the rules and so do I
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
+I just wanna tell you how I'm feeling
+Gotta make you understand
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+We've known each other for so long
+Your heart's been aching but you're too shy to say it
+Inside we both know what's been going on
+We know the game and we're gonna play it
+And if you ask me how I'm feeling
+Don't tell me you're too blind to see
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give, never gonna give
+(Give you up)
+We've known each other for so long
+Your heart's been aching but you're too shy to say it
+Inside we both know what's been going on
+We know the game and we're gonna play it
+I just wanna tell you how I'm feeling
+Gotta make you understand
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+*/
+
+/*
+                        CREDITS
+
+   to Atlas, Leros, peaky, TechPizza, SaladinAkara, and everyone else
+
+                      Thank you :D
+*/
+
+body,head {
+    color: rgb(192, 192, 192);
+    font-size: 0.5cm;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 10px red,
+    -1px -1px 10px blue;
+}
+body{
+    background: url("/background_fallback.jpeg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+html,body {
+    text-align: center;
+    margin: 0;
+    font-family: "Singlet-Regular";
+    scrollbar-color: rgb(46, 0, 38) black;
+}
+
+
+code{
+    text-shadow: none;/*0px 0px 6px red*/
+}
+
+#background{
+    position: fixed;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+
+
+    /*background-color: black;
+    animation-name: trippy;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+}
+
+
+@keyframes trippy{
+    from{
+        filter: hue-rotate(0);
+    }
+
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#entire-thing-container{
+    max-width: 2000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+@font-face {
+    font-family: "Singlet-Regular";
+    src: url('/fonts/Sniglet-Regular.ttf');
+}
+
+a{
+    color: rgb(161, 247, 255);
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height:auto;
+}
+
+a:hover {
+    color: rgb(247, 0, 255);
+    font-weight: bold;
+}
+
+#pancake-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 2px dashed rgba(255,255,255,0.4);
+}
+header > a{
+    margin-left: 12px;
+    margin-right: 12px;
+    text-decoration: none;
+    font-size: 125%;
+}
+
+footer {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 2px dashed rgba(255,255,255,0.4);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-part{
+    position: relative; min-height: 60px; display: block;min-width: 33.3%;
+}
+.footer-part-content{
+    text-align: center;
+    display: inline;
+    vertical-align: 50%;
+    /*position:absolute;bottom: 0;*/
+}
+
+.generic-flex-container{
+    display: flex; flex-wrap: wrap;  justify-content: center;
+    align-items: flex-start;
+}
+
+.centered-thing{
+    margin-left:auto;margin-right:auto;
+}
+
+.textbox-normal{
+    border-color: rgb(110, 0, 110);
+    border-width: 25px;
+    border-style: outset;
+    background: rgb(85, 6, 88);
+}

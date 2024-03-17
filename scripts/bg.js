@@ -17,6 +17,7 @@ uniform vec2 canvas_res;
 uniform vec2 screen_res;
 uniform float time;
 uniform sampler2D tex;
+uniform float party;
 
 varying vec2 vecPos;
 
@@ -32,11 +33,11 @@ void main() {
     uv.y = 1.-uv.y;
     //vec2 uv = vec2(gl_FragCoord.x, canvas_res.y - gl_FragCoord.y) / screen_res;
 
-    float wonkiness = max(min(time/5.,1.),0.);
+    float wonkiness = max(min(party * time/5.,1.),0.) * party;
     uv.x += mix(0.
-        ,sin(time *0.5 + uv.y*1.5)* 0.01,wonkiness)/2.;
+        ,sin(party *time *0.5 + uv.y*1.5)* 0.01,wonkiness)/2.;
     uv.y += mix(0.
-        ,cos(time *0.5 + uv.x*5.)* 0.01,wonkiness)/2.;
+        ,cos(party * time *0.5 + uv.x*5.)* 0.01,wonkiness)/2.;
 
     float dim = (255.0-170.0)/255.0;
     vec3 color = texture2D(tex,uv.xy).xyz;
@@ -86,7 +87,7 @@ const randomBG = bgs[Math.floor(Math.random()*bgs.length)]
 const background = twgl.createTexture(gl, {
     src: "/backgrounds/" + randomBG
 });
-
+var bg_party_mode = 1;
 function render(time) {
     twgl.resizeCanvasToDisplaySize(gl.canvas);
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
@@ -95,7 +96,8 @@ function render(time) {
         time: time / 1000.0,
         screen_res: [window.screen.width, window.screen.height],
         canvas_res: [gl.canvas.width, gl.canvas.height],
-        tex: background
+        tex: background,
+        party: bg_party_mode
     };
 
     gl.useProgram(programInfo.program);
