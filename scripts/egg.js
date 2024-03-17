@@ -50,8 +50,18 @@ document.addEventListener('keydown', function(e) {
     konamiCodePosition = 0;
   }
 });
-
+var cheats_activated = false;
 function activateCheats() {
+  
+  if(cheats_activated)
+  {
+    location.reload();
+    return;
+  }else if(!confirm("Do you really want to do this to yourself?")){
+    return;
+  }
+
+  cheats_activated = true;
   document.getElementById("background").classList.add("scrolling-bg");
   bg_party_mode = 6;
   //alert("Party mode activated!");
