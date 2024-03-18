@@ -43,11 +43,19 @@ li::marker {
     #text-wrapper{
         width:45%; 
     }
+    .game-screenshots
+    {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
 }
 
 @media screen and (max-width : 1360px){
     #text-wrapper{
         width: 70%; /*75%*/
+    }
+    .game-screenshots
+    {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
     }
 }
 
